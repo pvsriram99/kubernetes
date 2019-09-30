@@ -12,6 +12,7 @@
  * [Security Contexts](#security-contexts)
  * [Service Accounts in Kubernetes](#service-accounts)
  * [Resource Requirements](#resource-requirements)
+ * [Command arguments](#command-arguments)
  
  ### PODs
  ----------
@@ -388,3 +389,34 @@ spec:
  * 1G is Gigabyte (1,000,000,000 bytes) and 1Gi means Gibibyte (1,073,741,824 bytes)
  * 1M is Megabyte (1,000,000 bytes) and 1Mi means Mebibyte (1,048,576 bytes)
  * 1k is Kilobyte (1,000 bytes) and 1Ki means Kibibyte (1,024 bytes)
+
+### Command arguments
+```YAML
+apiVersion: v1
+kind: Pod
+metadata:
+  name: webapp-green
+  labels:
+      name: webapp-green
+spec:
+  containers:
+  - name: simple-webapp
+    image: kodekloud/webapp-color
+    args: ["--color", "green"]
+```
+```YAML
+apiVersion: v1
+kind: Pod
+metadata:
+  name: webapp-green
+  labels:
+    app: webapp-green
+spec:
+  containers:
+  - name: webapp-green
+    image: kodekloud/webapp-color
+    # Docker ENTRYPOINT replaces with command
+    command: ["color"]
+    # Docker CMD replaces with args
+    args: ["green"] 
+```
