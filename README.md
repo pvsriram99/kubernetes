@@ -24,7 +24,6 @@ It is responsible for actual orchestration of containers on workers nodes.
          Controllers - Responsible for orchistration, scalling, endpoint
          Schedulers - Destributing work/ containers across multiple nodes
 
-
 ### Master Vs worker Nodes
  * Worker nodes -> where containers are hosted
  * Master is where Kube-API server installed
@@ -39,3 +38,7 @@ Example:
 The containers are encapsulated into kubernet object called POD.
 POD: Single instance of application OR smallest object in kubernetes.
 It is recommeded to host one application in one POD. Sometimes we can host multi applications in same POD.
+
+### More
+ * [kubernetes services usage](resources)
+ * [Kubernetes definition files/ yml](definition_files)
