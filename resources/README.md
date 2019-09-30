@@ -1,17 +1,17 @@
 # kubernetes services usage
- * PODS
- * Replication Controller
- * ReplicaSet
- * Namespaces
- * Deployments
- * Config Maps
- * Resource Quota
- * Env variables in Kubernetes
- * Secrets
- * Encode and decode strings in Linux
- * Security Contexts
- * Service Accounts in Kubernetes
- * Resource Requirements
+ * [PODS](#pods)
+ * [Replication Controller](#replication-controller)
+ * [ReplicaSet](#replicaset)
+ * [Namespaces](#namespaces)
+ * [Deployments](#deployments)
+ * [Config Maps](#config-maps)
+ * [Resource Quota](#resource-quota)
+ * [Env variables in Kubernetes](#environment-variables)
+ * [Secrets](#secrets)
+ * [Encode and decode strings in Linux](#encode-and-decode-strings-in-linux)
+ * [Security Contexts](#security-contexts)
+ * [Service Accounts in Kubernetes](#service-accounts)
+ * [Resource Requirements](#resource-requirements)
  
  ### PODs
  ----------
