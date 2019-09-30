@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: webapp-green
+  labels:
+    app: webapp-green
+spec:
+  containers:
+  - name: webapp-green
+    image: kodekloud/webapp-color
+    # Docker ENTRYPOINT replaces with command
+    command: ["color"]
+    # Docker CMD replaces with args
+    args: ["green"] 

@@ -1,0 +1,23 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: myapp-pod
+  labels:
+    app:  myapp
+    costcenter: america
+    location: NA
+    type: frontend
+
+spec:
+  containers:
+    - name: nginx-container
+      image: nginx
+          ports:
+            - containerPort: 8080
+          resources:
+            requests:
+                memory: "1Gi"
+                cpu: 1  # 1 mean 1 vCPU in AWS and 1 core in GCP and Azure
+          limits:   # we can set the resource usage in limits section
+          memory: "2Gi"
+          cpu: 2

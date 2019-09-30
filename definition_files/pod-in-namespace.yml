@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  creationTimestamp: null
+  labels:
+    run: redis
+    tier: db
+  name: redis
+  namespace: finance
+spec:
+  containers:
+  - image: redis:alpine
+    imagePullPolicy: IfNotPresent
+    port:
+      - containerPort: 8080
+    name: redis
+    resources: {}
+  dnsPolicy: ClusterFirst
+  restartPolicy: Always
+status: {}
